@@ -1,10 +1,10 @@
 package com.example.kotlin_restapi_ex.service
 
-import Post
+import Photo
 //import com.example.kotlin_restapi_ex.model.Post
 import retrofit2.http.GET
 
-interface PostService {
-    @GET("posts")
-    suspend fun getPosts(): List<Post>
+interface PhotoService {
+    @GET("photos")
+    suspend fun getPhotos(): List<Photo>
 }

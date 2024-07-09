@@ -1,6 +1,6 @@
 package com.example.kotlin_restapi_ex
 
-import PostScreen
+import PhotoScreen
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -14,10 +14,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.kotlin_restapi_ex.ui.theme.Kotlin_restapi_exTheme
-import com.example.kotlin_restapi_ex.viewmodel.PostViewModel
+import com.example.kotlin_restapi_ex.viewmodel.PhotoViewModel
 
 class MainActivity : ComponentActivity() {
-    private val viewModel: PostViewModel by viewModels()
+    private val viewModel: PhotoViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    PostScreen(viewModel)
+                    PhotoScreen(viewModel)
                 }
             }
         }

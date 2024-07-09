@@ -80,4 +80,5 @@ dependencies {
     implementation ("com.beust:klaxon:5.5")
     // Coroutines for asynchronous programming
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.1")
+    implementation("io.coil-kt:coil-compose:2.4.0")
 }

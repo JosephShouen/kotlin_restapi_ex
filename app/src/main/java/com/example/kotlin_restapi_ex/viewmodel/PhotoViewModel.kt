@@ -1,25 +1,25 @@
 package com.example.kotlin_restapi_ex.viewmodel
 
-import Post
+import Photo
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.kotlin_restapi_ex.data.PostRepository
+import com.example.kotlin_restapi_ex.data.PhotoRepository
 //import com.example.kotlin_restapi_ex.model.Post
 import kotlinx.coroutines.launch
 
-class PostViewModel : ViewModel() {
-    private val repository = PostRepository()
+class PhotoViewModel : ViewModel() {
+    private val repository = PhotoRepository()
 
-    private val _posts = MutableLiveData<List<Post>>()
-    val posts: LiveData<List<Post>> = _posts
+    private val _photos = MutableLiveData<List<Photo>>()
+    val photos: LiveData<List<Photo>> = _photos
 
-    fun fetchCreditCards() {
+    fun fetchPhotos() {
         viewModelScope.launch {
             try {
-                val posts = repository.getPosts()
-                _posts.value = posts
+                val photos = repository.getPhoto()
+                _photos.value = photos
             } catch (e: Exception) {
                 // Handle error
             }

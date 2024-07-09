@@ -13,7 +13,7 @@ object RetrofitInstance {
             .build()
     }
 
-    val postService: PostService by lazy {
-        retrofit.create(PostService::class.java)
+    val photoService: PhotoService by lazy {
+        retrofit.create(PhotoService::class.java)
     }
 }
